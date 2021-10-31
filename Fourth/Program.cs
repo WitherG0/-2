@@ -1,4 +1,4 @@
-﻿
+
 using System;
 
 namespace Fourth
@@ -7,33 +7,37 @@ namespace Fourth
     {
         static void Main(string[] args)
         {
-            
+
             float x;
-            double i, q, a;
-            int p, k, K, d;
+            double i, q, d, a;
+            int p, k, K, g;
             Console.WriteLine("Введите х:");
             x = float.Parse(Console.ReadLine());
             Console.WriteLine("Точность?(от 1 до 0,00...01)");
             q = double.Parse(Console.ReadLine());
-            a = 0;
-            p = 0;
-            K = 0; d = 1;
+            a = 1; g = 2;
+            p = 2;K = 0; d = 1;
             k = 2;
-            d = d * k;
-            a = a + Math.Pow(-1, 1 + K) * Math.Pow(x, p + 2) / d;
+            d = d * g;
+            a = a + Math.Pow(-1, 1 + K) * Math.Pow(x, p) / d;
             i = Math.Abs(Math.Pow(-1, 1 + K) * Math.Pow(x, p + 2) / d);
-
+            p = p + 2;
+            Console.WriteLine(d);
             k++;
             K++;
+            d = 2;
             do
             {
-                d = d * k;
-                a = a + Math.Pow(-1, 1+K)*Math.Pow(x, p + 2) / d;
+                g++;
+                d = d * g;
+                g++;
+                d = d * g;
+                a = a + Math.Pow(-1, 1 + K) * Math.Pow(x, p) / d;
                 i = Math.Abs(Math.Pow(-1, 1 + K) * Math.Pow(x, p + 2) / d);
                 k++;
-                K++;
+                p = p + 2;
+                K++;               
             } while (i > q);
-            a = a + 1;
             /*(╯°□°）╯︵ ┻━┻*/
             Console.WriteLine($"cos(x)={a}");
             Console.WriteLine(K);
