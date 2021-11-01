@@ -6,11 +6,12 @@ namespace Six
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите возраст (в годах)");
             for (int i = 0; i <= 100; i++)
             {
-                Console.WriteLine("Введите возраст (в годах)");
+                
                 string text = $"{i}";
-                Console.WriteLine("|||||||||||||||||||||||||||");
+                Console.WriteLine(" ");
                 int y = text[text.Length - 1] - '0';
                 int a = int.Parse(text);
                 if (y == 1 && a != 11)
