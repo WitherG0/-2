@@ -30,6 +30,10 @@ namespace Six
                     Console.WriteLine($"{text} лет");
                 }
             }
+            if (a<0&&a>100)
+            {
+            Console.WriteLine("Ошибка");
+            }
         }
     }
 }
